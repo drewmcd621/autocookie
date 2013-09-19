@@ -80,16 +80,13 @@ function upgradeBuy()
 
 //http://cookieclicker.wikia.com/wiki/Cookie_Monster_%28JavaScript_Add-on%29
 function gui() {
-var jA = document.createElement('script');
-jA.setAttribute('type', 'text/javascript');
-jA.setAttribute('src', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
-jA.onload = function() {
-  var jB = document.createElement('script');
-  jB.setAttribute('type', 'text/javascript');
-  jB.setAttribute('src', 'http://pastebin.com/raw.php?i=2KRNm8Gm');
-  document.body.appendChild(jB);
-};
-document.body.appendChild(jA);
+function getScript(url) {
+    e = document.createElement('script');
+    e.src = url;
+    document.body.appendChild(e);
+}
+getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
+getScript('http://pastebin.com/raw.php?i=2KRNm8Gm');
 
 start();
 }
